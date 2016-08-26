@@ -1,12 +1,25 @@
-<HTML>
-<HEAD>
-    <TITLE>Jira-Argonath</TITLE>
-</HEAD>
-<BODY>
-<DIV aligh="center">
-    Welcome to Gondor<BR>
-    <img src="img/argonath_by_elizabethcameron.jpg"><br>
-    <span style="font-size:8pt">Argonath by Elizabeth Cameron</span>
-</DIV>
-</BODY>
+<!doctype html>
+<HTML ng-app="app">
+    <HEAD>
+        <TITLE>Jira-Argonath</TITLE>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="js/venn/venn.min.js"></script>
+        <script src="js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+    </HEAD>
+    <BODY>
+        <DIV id="main_container" ng-controller="MainController" align="center">
+            <h3>Welcome to Gondor</h3>
+            <img src="img/argonath_by_elizabethcameron.jpg" width="400px"><br>
+
+            Choose a Project
+            <div ng-repeat="project in $scope.projects">
+                <input type="checkbox" value="project.selected">
+            </div>
+
+            <h3>ProjectName - BacklogName</h3>
+            <div style="margin-top: 25px" id="venn"></div>
+        </DIV>
+    </BODY>
 </HTML>
