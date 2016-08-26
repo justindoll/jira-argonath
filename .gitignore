@@ -1,6 +1,7 @@
 .gradle
 build/
 .idea/
+classes/
 gradle-app.setting
 .classpath
 .project

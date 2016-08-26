@@ -22,4 +22,6 @@ public class JiraArgonath extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(JiraArgonath.class, args);
 	}
+
+
 }
