@@ -1,0 +1,7 @@
+#dependency versions
+springBootVersion=1.3.3.RELEASE
+spockVersion=1.0-groovy-2.4
+groovyVersion=2.4.6
+entityServiceVersion=4.17.0
+userEntityClientVersion=0.60.0
+serviceCommonVersion=1.63.0
