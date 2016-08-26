@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan({"com.peoplenet.argonath",
 				"com.peoplenet.argonath.controller",
+				"com.peoplenet.argonath.config",
 				"com.peoplenet.argonath.dao",
 				"com.peoplenet.argonath.model",
 				"com.peoplenet.argonath.service"})

@@ -6,6 +6,7 @@ import com.peoplenet.argonath.model.Project
 import org.springframework.beans.factory.annotation.Autowired
 import spock.lang.Specification
 
+
 /**
  * Created by mporter on 8/26/16.
  */
@@ -29,6 +30,24 @@ class JiraServiceSpec extends Specification{
         Backlog b = jiraService.getProjectBacklog(p)
         then: "The backlog exists and has stories."
         1 * jiraDao.getBacklog(_) >> new Backlog()
+    }
+
+    def "Test that I can get a list of projects"() {
+        given: "I have access to a jiraService"
+        jiraService!=null;
+        when: "I call getProjects"
+        ArrayList<Project> projects = jiraService.getProjects()
+        then:
+        1 * jiraDao.getProjects() >> getFakeProjectList()
+        projects.size()==3
+    }
+
+    def getFakeProjectList() {
+        ArrayList<Project> projects = new ArrayList<>()
+        projects.add(new Project("Fake Project 1"))
+        projects.add(new Project("Fake Project 2"))
+        projects.add(new Project("Fake Project 3"))
+        return projects
     }
 
 }

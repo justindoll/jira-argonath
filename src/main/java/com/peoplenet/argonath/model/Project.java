@@ -8,5 +8,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class Project {
 
+    public Project() {}
+
+    public Project(String name) {
+        this.name = name;
+    }
+
+    public Project(String name, String id, String key) {
+        this.name=name;
+        this.id=id;
+        this.key=key;
+    }
+
     public String name;
+
+    public String id;
+
+    public String key;
 }
